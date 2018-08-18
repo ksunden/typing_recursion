@@ -17,3 +17,10 @@ I have only gotten the bug to present itself:
 * only if the test script is *not* in the module
 * Python 3.6, 3.7 (3.5 complains about the relative import without the parent module being loades)
     - Have not tested on 2.7
+
+
+A fuller history of all my zeroing in on here can be seen at:
+
+https://github.com/ksunden/WrightTools/tree/type-hints
+With appveyor builds:
+https://ci.appveyor.com/project/wright-group/wrighttools-1oxes/history
