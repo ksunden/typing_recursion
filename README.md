@@ -23,8 +23,10 @@ I have only gotten the bug to present itself:
 |Windows| other error       | :x:     (6)       | :x:               |
 
 :x: Bug presents
+
 :heavy_check_mark: Bug does not present
-<empty> Not yet tested
+
+\<empty\> Not yet tested
 
 
 Note that on windows python 3.5, an error about not being able to do a relative import because the parent module is not loaded is thrown.
