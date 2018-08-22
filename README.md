@@ -9,14 +9,28 @@ In all, I have a 12 line (including the test case) example showing it off with o
 
 
 I have only gotten the bug to present itself:
-* On Windows
 * In a `weakref.finalize` call
 * In a relative import
 * When `typing` is imported
 * Using `pytest` via `setup.py test`
 * only if the test script is *not* in the module
-* Python 3.6, 3.7 (3.5 complains about the relative import without the parent module being loades)
-    - Have not tested on 2.7
+
+
+|       | 3.5.5             | 3.6.(5\|6)        | 3.7.0             |
+|-------|-------------------|-------------------|-------------------|
+|Linux  | :x:               | :x:  (both)       | :heavy_check_mark:|
+|MacOS  |                   | :x:     (5)       |                   |
+|Windows| other error       | :x:     (6)       | :x:               |
+
+:x: Bug presents
+:heavy_check_mark: Bug does not present
+<empty> Not yet tested
+
+
+Note that on windows python 3.5, an error about not being able to do a relative import because the parent module is not loaded is thrown.
+This is odd, since the function doing the import is in the parent module.
+This leads me to believe something is going on with modules being unloaded before the weakref call is completed.
+Though I am unsure how such behavior would result in the bug I'm actually trying to produce.
 
 
 A fuller history of all my zeroing in on here can be seen at:
