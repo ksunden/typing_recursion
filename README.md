@@ -20,7 +20,7 @@ I have only gotten the bug to present itself:
 |-------|-------------------|-------------------|-------------------|
 |Linux  | :x:               | :x:  (both)       | :heavy_check_mark:|
 |MacOS  |                   | :x:     (5)       |                   |
-|Windows| other error       | :x:     (6)       | :x:               |
+|Windows| other error       | :x:     (6)       | :heavy_check_mark:|
 
 :x: Bug presents
 
